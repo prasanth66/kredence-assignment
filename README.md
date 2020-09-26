@@ -7,12 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Demo 
-
-click here to see the demo video .<br />
-
-appication is hosted in heroku.click here to open the application.
-
 ## Application Use
 
 The purpose of the appliction is to keep track of all your tasks.
