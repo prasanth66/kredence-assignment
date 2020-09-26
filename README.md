@@ -36,6 +36,4 @@ The purpose of the appliction is to keep track of all your tasks.
                                                    |                         |
                                            dropdown  information      tasklist addtask
 
-### Display Pages for the application
 
-![alt text](https://drive.google.com/file/d/1IZKq-oTASrwO7fOjTmB9eEnTs-D4C0-1/view?usp=sharing)
