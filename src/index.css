@@ -1,0 +1,36 @@
+body{
+    background-color: whitesmoke;
+}
+#appbar{
+    background-color: lightgray;
+}
+.center{
+    text-align: center;
+    margin-top: 6%;
+    
+}
+
+.inputfields{
+    padding: 5px 5px;
+}
+.buttons{
+    margin: 5px;
+    padding: 5px;
+}
+
+.Dropdown, .Information{
+    margin: 2%;
+}
+
+.TaskComponent{
+    width: 70%;
+    margin-left: 10%;
+}
+
+#addtask{
+    background-color: green;
+    margin: 5px;
+}
+
+
+

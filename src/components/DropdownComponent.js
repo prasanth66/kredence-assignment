@@ -3,19 +3,16 @@ import {FormControl,InputLabel,Select} from '@material-ui/core'
 
 class Dropdown extends React.Component{
 
-
-  
-
     render(){
 
      const DropdownHandler=(event)=>{
-            console.log(event.target.value);
+        this.props.dropdown(event.target.value);
           }
 
         return(
             <div className="Dropdown">
               <FormControl variant="outlined" style={{minWidth: 250}} >
-                  <InputLabel >Dropdown</InputLabel>
+                  <InputLabel >Latest Technologies</InputLabel>
                   <Select   native onChange={DropdownHandler}>
                       <option value="" ></option>
                       <option value="internetofthings">Internet Of Things</option>

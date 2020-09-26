@@ -4,6 +4,7 @@ class Informaton extends React.Component{
     render(){
         return(
             <div className="Information">
+                {/* displaying dropdown selected information by using switch case */}
                  {(()=>{
 
                   switch(this.props.information){

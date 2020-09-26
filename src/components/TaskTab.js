@@ -1,41 +1,38 @@
 import React from 'react';
 import Tasklist from './TaskComponent';
-import {Button} from '@material-ui/core';
+import AddTask from './AddTaskComponent';
+
+
 
 class Task extends React.Component{
 
     constructor(props){
         super();
-        this.state={
-            Tasklist:[]
-        }
+        this.addNewTask = this.addNewTask.bind(this);
     }
 
-    callTaskAPI(){
-        fetch("http://jsonplaceholder.typicode.com/todos")
-        .then(res =>res.json())
-        .then((res)=>{
-            this.setState({
-                Tasklist:res
-            })
-        })
-        .catch((error)=>{
-            console.log("error in fetching task details",error)
-        })
-    }
-
-    componentWillMount(){      
-        this.callTaskAPI();     
-    }
+    // method to add new task
+    addNewTask(task){
+       
+       task.userId=this.props.appState.userid;
+       this.props.taskList(task);
+      }
+  
     render(){
-        
+        let id=this.props.appState.userid;
+       let deletetask=this.props.deletetask
         return(
             <div className="Task">
-                <Button variant="contained" color="primary">Add Task</Button>
-                
-                {this.state.Tasklist.map(function(val,index){
-                    
-                    return <Tasklist key={index} task={val}/>
+               <AddTask addtask={this.addNewTask}/>
+                {this.props.appState.Tasklist.map(function(val,index){
+                     
+                    if(id==val.userId){
+                        
+                        return <Tasklist key={index} task={val} deleteTask={deletetask} index={index+1}/>
+                    }
+                   
+                    else
+                    return null;
                 })}
             </div>
         )
